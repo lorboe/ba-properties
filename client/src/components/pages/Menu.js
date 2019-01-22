@@ -8,7 +8,7 @@ import {
   NavItem,
 } from "reactstrap";
 import api from "../../api";
-import { Route, Link, NavLink } from "react-router-dom";
+import {NavLink } from "react-router-dom";
 
 export default class Menu extends React.Component {
   constructor(props) {
