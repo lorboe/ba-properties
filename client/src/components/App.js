@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Link, NavLink, Switch } from 'react-router-dom';
+import Menu from './pages/Menu';
+import Navbar from './pages/Navbar';
+
 import Home from './pages/Home';
 import Countries from './pages/Countries';
 import AddCountry from './pages/AddCountry';
@@ -7,7 +10,7 @@ import Secret from './pages/Secret';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import api from '../api';
-import logo from '../logo.svg';
+// import logo from '../logo.svg';
 
 class App extends Component {
   constructor(props) {
@@ -26,8 +29,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">MERN Boilerplate</h1>
+        <Navbar />
+      {/* <Menu /> */}
           <NavLink to="/" exact>Home</NavLink>
           <NavLink to="/countries">Countries</NavLink>
           <NavLink to="/add-country">Add country</NavLink>
@@ -45,6 +48,10 @@ class App extends Component {
           <Route path="/secret" component={Secret} />
           <Route render={() => <h2>404</h2>} />
         </Switch>
+
+        <footer>
+
+        </footer>
       </div>
     );
   }
